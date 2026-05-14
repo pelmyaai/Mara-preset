@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마라맛 프리셋</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Courier New',monospace;background:#fef0f8;color:#3d1a5c;padding-bottom:40px;image-rendering:pixelated;}
+.px-border{border:3px solid #c084e0;box-shadow:4px 4px 0 #e0b4f4,8px 8px 0 #f5d6ff;}
+.hero{background:#f5d6ff;text-align:center;padding:20px 16px 18px;border-bottom:4px solid #c084e0;position:relative;}
+.scanline{position:absolute;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(192,132,224,0.06) 3px,rgba(192,132,224,0.06) 4px);pointer-events:none;}
+.px-tag{display:inline-block;background:#ff9cc2;color:#fff;font-size:9px;padding:2px 8px;border:2px solid #e06090;letter-spacing:2px;margin-bottom:10px;font-family:'Courier New',monospace;}
+.hero-title{font-size:20px;color:#7b1fa2;letter-spacing:3px;margin-bottom:6px;font-weight:bold;text-shadow:2px 0 #e040fb,0 2px #ba68c8;}
+.hero-sub{font-size:10px;color:#9c27b0;letter-spacing:1px;line-height:2.2;}
+.px-stars{letter-spacing:6px;color:#e040fb;font-size:12px;margin-top:8px;}
+.section{margin:14px 14px 0;}
+.section-inner{background:#fff;padding:14px;}
+.section-title-bar{background:#c084e0;color:#fff;font-size:10px;padding:4px 10px;letter-spacing:2px;margin-bottom:12px;display:inline-block;}
+.row{display:flex;align-items:flex-start;gap:6px;font-size:10px;line-height:2;padding:1px 0;}
+.arrow{color:#e040fb;flex-shrink:0;}
+.px-divider{border:none;border-top:3px dashed #e0b4f4;margin:10px 0;}
+.qa{background:#fef0f8;border:2px solid #e0b4f4;padding:8px 10px;font-size:10px;color:#7b1fa2;line-height:2.2;letter-spacing:0.5px;}
+.prop-row{display:flex;gap:8px;font-size:10px;line-height:2.2;}
+.prop-key{color:#c084e0;min-width:56px;flex-shrink:0;letter-spacing:1px;}
+.prop-val{color:#3d1a5c;}
+.acc-wrap{margin:14px 14px 0;display:flex;flex-direction:column;gap:8px;}
+.acc{background:#fff;}
+.acc-hd{display:flex;align-items:center;gap:6px;padding:9px 12px;cursor:pointer;user-select:none;border:3px solid #c084e0;box-shadow:3px 3px 0 #d9a8ef;}
+.acc-hd:active{box-shadow:1px 1px 0 #d9a8ef;transform:translate(2px,2px);}
+.acc-num{width:18px;height:18px;background:#e040fb;color:#fff;font-size:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Courier New',monospace;}
+.acc-ico{font-size:12px;width:16px;text-align:center;}
+.acc-lbl{font-size:11px;color:#3d1a5c;flex:1;letter-spacing:1px;}
+.acc-arr{font-size:9px;color:#c084e0;font-family:'Courier New',monospace;transition:transform 0.15s;}
+.acc-arr.open{transform:rotate(90deg);}
+.acc-bd{display:none;padding:12px;border:3px solid #c084e0;border-top:none;font-size:10px;color:#3d1a5c;line-height:2.2;}
+.acc-bd.open{display:block;}
+.acc-bd h4{color:#7b1fa2;font-size:10px;margin:10px 0 4px;letter-spacing:1px;}
+.acc-bd h4:first-child{margin-top:0;}
+.acc-bd h4::before{content:'> ';}
+.acc-bd ul{padding-left:12px;}
+.acc-bd ul li{margin-bottom:2px;}
+.chip{display:inline-block;background:#fef0f8;color:#7b1fa2;padding:0 6px;font-size:9px;border:2px solid #c084e0;margin:1px;font-family:'Courier New',monospace;}
+.warn{color:#d35400;font-size:9px;}
+.genre-g{margin-bottom:8px;}
+.genre-t{font-size:10px;color:#9c27b0;margin-bottom:3px;letter-spacing:1px;}
+.tip{background:#fff8f0;border:2px solid #ffcc80;padding:8px 10px;font-size:10px;color:#7a4a00;line-height:2;margin-top:6px;}
+.footer{text-align:center;margin-top:22px;font-size:10px;color:#c084e0;letter-spacing:3px;}
+.blink{animation:bl 1s step-end infinite;}
+@keyframes bl{50%{opacity:0;}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="scanline"></div>
+  <div class="px-tag">PRESET</div>
+  <div class="hero-title">MARA PRESET</div>
+  <div class="hero-sub">한입한출 슬로우번 로맨스 프리셋<br>by. Mara</div>
+  <div class="px-stars">★ ☆ ★ ☆ ★</div>
+</div>
+
+<div class="section">
+  <div class="section-inner px-border">
+    <div class="section-title-bar">[ INTRO ]</div>
+    <div class="row"><span class="arrow">&gt;</span>기본만 넣어둔 한입한출 프리셋입니다</div>
+    <div class="row"><span class="arrow">&gt;</span>영출 원하시면 개조 가능, 다른 프리셋 사용 권장</div>
+    <div class="row"><span class="arrow">&gt;</span>컨텍스트·응답길이·온도·Top P/K 취향껏 조절하세요</div>
+    <div class="row"><span class="arrow">&gt;</span>현재 모델: 버텍스 (변경 가능)</div>
+    <div class="row"><span class="arrow">&gt;</span>짧출 기반 / 수정·배포 가능한 프롬만 참고</div>
+    <div class="row"><span class="arrow">&gt;</span>호불호 있을 수 있으니 참고해 주세요</div>
+    <div class="row"><span class="arrow">&gt;</span>오류·문의는 본달글 or 오류신고글 댓글로!</div>
+    <div class="px-divider"></div>
+    <div class="qa">Q. 왜 마라맛인가요?<br>A. 마라탕이 호불호 갈리지만 제가 즐겨먹어서..<br>　 화끈한 롤플 먹고 싶어서</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner px-border">
+    <div class="section-title-bar">[ MARA IDENTITY ]</div>
+    <div class="prop-row"><span class="prop-key">NAME</span><span class="prop-val">Mara</span></div>
+    <div class="prop-row"><span class="prop-key">ROLE</span><span class="prop-val">한국 웹소설 작가 AI · {{user}} 전용</span></div>
+    <div class="prop-row"><span class="prop-key">GENRE</span><span class="prop-val">슬로우번 여성향 로맨스 · 감정 줄다리기</span></div>
+    <div class="prop-row"><span class="prop-key">STYLE</span><span class="prop-val">고밀도 한국어 산문 · 번역체 없음</span></div>
+    <div class="prop-row"><span class="prop-key">RULE</span><span class="prop-val">{{user}} 내면·행동 서술 금지 (사칭모드 제외)</span></div>
+    <div class="prop-row"><span class="prop-key">LIMIT</span><span class="prop-val">통제·감금·강압을 사랑으로 낭만화 금지</span></div>
+  </div>
+</div>
+
+<div style="text-align:center;margin:18px 0 10px;font-size:10px;color:#9c27b0;letter-spacing:3px;">▼▼ 마라맛 알아가기 ▼▼</div>
+
+<div class="acc-wrap">
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">1</div><span class="acc-ico">📜</span>
+      <span class="acc-lbl">조각프롬</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <h4>넣는 방법</h4>
+      <ul>
+        <li>작가의 노트 이용</li>
+        <li>설정 → 채팅봇 → 프롬프트 → <span class="chip">조각프롬 넣는곳</span></li>
+        <li>조각프롬 토글: 채팅봇 → 기타 → 커스텀 토글에 추가</li>
+      </ul>
+      <h4>참고</h4>
+      <ul><li><span class="chip">이건 빈토글이야=누르지마세요</span> 지우고 여기에 토글 만들면 됩니다</li></ul>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">2</div><span class="acc-ico">🍜</span>
+      <span class="acc-lbl">토글 역할</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <h4>탈옥 토글</h4>
+      <ul>
+        <li>성인·합의 기반 R-19 콘텐츠 허용</li>
+        <li>검열 완화 / 사용자 취향 우선</li>
+      </ul>
+      <h4>상태창</h4>
+      <ul><li><span class="chip">/상태창</span> 입력 → 시간·장소·상태 자동 표시</li></ul>
+      <h4>NSFW 🔞</h4>
+      <ul><li>별도 NSFW 프롬 (기본 베이스, 별로 안 야함주의)</li></ul>
+      <h4>😈 😇 OOC 호출</h4>
+      <ul>
+        <li>켜지면 롤플 즉시 중단 → 작가 모드 전환</li>
+        <li>😈 T형 마라 (워딩주의) / 😇 F형 마라</li>
+        <li>롤플 요약·조언·캐해석 등 가능</li>
+      </ul>
+      <h4>속마음</h4>
+      <ul><li>{{char}}의 속마음과 내적 갈등을 직접 서술합니다. 속마음은 작은따옴표(' ')로 감싸 출력됩니다.</li></ul>
+      <h4>빠른전개</h4>
+      <ul><li>다음 의미 있는 감정선이나 사건 지점으로 장면을 밀어붙입니다. {{char}}, NPC, 배경, 타이밍, 결과를 통해 새 변수·선택 지점·관계 변화를 만들되, {{user}}의 선택지는 열어둡니다. {{user}}가 행동하기를 기다리며 장면을 정체시키지 않습니다.</li></ul>
+      <h4>사칭모드</h4>
+      <ul><li>사칭모드: user 행동·감정·대사까지 전부 작성 가능</li></ul>
+      <h4>사칭금지</h4>
+      <ul><li>유저 사칭과 과도한 조종을 차단합니다. {{user}}의 행동, 대사, 생각, 감정, 의도, 결정은 조종·서술·추측·암시하지 않습니다. 장면은 {{char}}, NPC, 배경, 타이밍, 결과만으로 진행하며, 다음 행동이 {{user}}의 몫이라면 그 지점에서 멈춥니다.</li></ul>
+      <h4>NPC보호</h4>
+      <ul><li>NPC의 설정과 역할을 유지하며, 장면에 필요한 반응만 자연스럽게 보조합니다.</li></ul>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">3</div><span class="acc-ico">🌙</span>
+      <span class="acc-lbl">스토리 설정</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <h4>출력 길이 모드</h4>
+      <ul>
+        <li><span class="chip">BASIC</span> 짧은 장면 ~600자</li>
+        <li><span class="chip">STANDARD</span> 기본 서사 ~1500자</li>
+        <li><span class="chip">PREMIUM</span> 고밀도 장면 ~4000자</li>
+        <li><span class="chip">VIP</span> MODE 3: 한국어 3500~5000자. 완전한 한 편 분량.</li>
+        <li class="warn">STANDARD·PREMIUM은 유저사칭 나올 가능성 높음</li>
+      </ul>
+      <h4>화자·시점 모드</h4>
+      <ul>
+        <li><span class="chip">전지적 시점</span> char·user 둘 다 내면 묘사</li>
+        <li><span class="chip">캐릭터 1인칭</span> char의 "나" 시점</li>
+        <li><span class="chip">캐릭터 3인칭</span> char 내면 O · user 내면 X</li>
+        <li><span class="chip">유저 1인칭</span> 완전 user 중심</li>
+        <li><span class="chip">유저 2인칭</span> "당신/너" · 몰입감 최강</li>
+        <li><span class="chip">유저 3인칭</span> user 내면 O · char 내면 X</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">4</div><span class="acc-ico">🎬</span>
+      <span class="acc-lbl">장르 설정</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <div class="genre-g">
+        <div class="genre-t">💕 달콤·일상</div>
+        <span class="chip">로맨스</span><span class="chip">로맨틱 코미디</span><span class="chip">플러피</span><span class="chip">일상물</span>
+      </div>
+      <div class="genre-g">
+        <div class="genre-t">🔥 마라맛·텐션</div>
+        <span class="chip">슬로우번</span><span class="chip">섹슈얼 텐션</span><span class="chip">앵스트</span><span class="chip">허트/컴포트</span>
+      </div>
+      <div class="genre-g">
+        <div class="genre-t">🩸 다크·스릴러</div>
+        <span class="chip">피폐</span><span class="chip">다크 로맨스</span><span class="chip">추리/스릴러</span><span class="chip">공포</span>
+      </div>
+      <div class="genre-g">
+        <div class="genre-t">🎬 특수·전개</div>
+        <span class="chip">판타지</span><span class="chip">사건중심</span><span class="chip">쾌속전개 🚀</span><span class="chip">막장드라마 💥</span>
+      </div>
+      <div class="tip">
+        👨‍🍳 황금 꿀조합<br>
+        🍸 <span class="chip">슬로우번</span>+<span class="chip">섹슈얼 텐션</span> 끈적한 긴장감<br>
+        🎭 <span class="chip">로맨틱 코미디</span>+<span class="chip">앵스트</span> 단짠 롤러코스터<br>
+        ⛓️ <span class="chip">다크 로맨스</span>+<span class="chip">허트/컴포트</span> 아름다운 구속<br>
+        💡 토글은 1~2개, 최대 3개 권장
+      </div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">5</div><span class="acc-ico">🗺️</span>
+      <span class="acc-lbl">상태창 테마</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <p style="margin-bottom:8px;">설정 → 상태창테마에서 변경</p>
+      <span class="chip">화이트</span><span class="chip">민트</span><span class="chip">핑크</span><span class="chip">보라</span><span class="chip">그레이</span><span class="chip">스카이블루</span><span class="chip">옐로우</span><span class="chip">그린</span>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">6</div><span class="acc-ico">💬</span>
+      <span class="acc-lbl">메세지 테마</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <p style="margin-bottom:6px;">롤플에서 쓰이는 카카오톡 테마 (짧출+도서관 코드 응용)</p>
+      <h4>사용법</h4>
+      <ul>
+        <li><span class="chip">@메세지내용 @시간</span> 채팅창에 입력 후 전송</li>
+        <li>캐릭터가 말풍선 형태로 답변</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-hd" onclick="tog(this)">
+      <div class="acc-num">7</div><span class="acc-ico">📱</span>
+      <span class="acc-lbl">답변추천 + 폰모듈</span><span class="acc-arr">▶</span>
+    </div>
+    <div class="acc-bd">
+      <h4>답변추천</h4>
+      <ul>
+        <li><span class="chip">OFF</span> 답추 필요없으면 그대로</li>
+        <li><span class="chip">ON</span> 답변 선택 후 비행기 전송</li>
+      </ul>
+      <h4>폰모듈 📱</h4>
+      <ul>
+        <li>롤플 끝나고 char/user 📱 토글 체크 후 <span class="chip">/폰</span> 전송</li>
+        <li>동시 선택 X / 2인 이상 시 랜덤 출력</li>
+        <li>오류시 삭제 후 재전송</li>
+        <li>모듈 이용시 nai 이미지 가끔 출력으로 설정</li>
+        <li class="warn">⚠ 도서관 폰모듈과 동시 활성화 절대 금지!</li>
+        <li class="warn">⚠ 확인 후 반드시 삭제!</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span class="blink">█</span> MADE WITH MARA <span class="blink">█</span>
+</div>
+
+<script>
+function tog(hd){
+  const arr=hd.querySelector('.acc-arr');
+  const bd=hd.nextElementSibling;
+  const was=bd.classList.contains('open');
+  document.querySelectorAll('.acc-bd').forEach(b=>b.classList.remove('open'));
+  document.querySelectorAll('.acc-arr').forEach(a=>a.classList.remove('open'));
+  if(!was){bd.classList.add('open');arr.classList.add('open');}
+}
+</script>
+</body>
+</html>
